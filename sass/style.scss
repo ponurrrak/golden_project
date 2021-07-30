@@ -1,0 +1,144 @@
+/* Variables */
+$color-main: #fed136;
+$color-light: #fff;
+
+$main-font: serif;
+$headers-font: sans-serif;
+$welcome-font: 'Noto Serif', serif;
+
+$transition: all 1s;
+
+
+/* Global */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+  margin:0;
+  font-family: $main-font;
+  font-size: 14px;
+}
+
+
+/* Splash */
+.splash {
+  height: 700px;
+  background-image: url("../images/splash_background.png");
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: $headers-font;
+  color: $color-light;
+  position: relative;
+}
+
+.splash nav {
+  padding-top: 48px;
+}
+
+.nav-menu-wrapper,
+.golden-logo {
+  padding: 0;
+}
+
+.nav-menu-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.splash nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.splash nav li {
+  display: inline-block;
+  margin-right: 36px;
+}
+
+.splash nav li:last-of-type {
+  margin-right: 0;
+}
+
+.splash a {
+  text-decoration: none;
+  color: $color-light;
+}
+
+.splash nav a:hover {
+  color: $color-main;
+}
+
+.splash-inner {
+  position: absolute;
+  top: calc(50vh + 80px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.splash-inner h1 {
+  font-size: 40px;
+  font-family: $welcome-font;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+.splash-inner h2 {
+  font-size: 64px;
+  font-weight: 800;
+  margin-top: 0;
+  margin-bottom: 48px;
+  white-space: nowrap;
+}
+
+.splash-inner a {
+  display: inline-block;
+  width: 242px;
+  background-color: $color-main;
+  padding: 23px 0;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 3%;
+  transition: $transition;
+}
+
+.splash-inner:hover a {
+  transform: scale(1.2);
+}
+
+
+/* Media queries */
+
+@media (max-width: 991px) {
+  .splash-inner h2 {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 767px) {
+  .golden-logo {
+    display: none;
+  }
+  .nav-menu-wrapper {
+    justify-content: center;
+  }
+  .splash-inner h1 {
+    font-size: 32px;
+  }
+  .splash-inner h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 575px) {
+  .splash nav li {
+    margin-right: 24px;
+  }
+}
