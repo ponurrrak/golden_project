@@ -25,7 +25,7 @@ body {
   font-family: $main-font;
   font-size: 14px;
   color: $color-main-font;
-  line-height: 1.7;
+  line-height: 1;
   text-align: center;
 }
 
@@ -42,7 +42,6 @@ h4 {
   font-family: $headers-font;
   font-weight: 800;
   color: $color-dark;
-  line-height:1;
   }
 
 section {
@@ -65,8 +64,11 @@ section h4 {
 .subtitle {
   font-size: 18px;
   font-style: italic;
-  line-height: 1;
   margin-bottom: 0;
+}
+
+article p {
+  line-height: 1.7;
 }
 
 
@@ -80,7 +82,6 @@ section h4 {
   background-attachment: fixed;
   font-family: $headers-font;
   color: $color-light;
-  line-height: 1;
   position: relative;
 }
 
@@ -121,19 +122,47 @@ section h4 {
   padding-left: 0;
 }
 
-.splash nav ul {
+.splash ul {
   list-style-type: none;
   margin: 0;
   padding-left: 0;
 }
 
-.splash nav li {
+.splash li {
   display: inline-block;
+  padding-bottom: 12px;
   margin-right: 40px;
+  position: relative;
 }
 
-.splash nav li:last-of-type {
+.splash li:last-of-type {
   margin-right: 0;
+}
+
+.splash li ul {
+  display: none;
+  position: absolute;
+  background-color: $color-main;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3%;
+}
+.splash li li {
+  display: block;
+  text-align: left;
+  margin: 12px 20px;
+  padding-bottom: 0;
+  white-space: nowrap;
+  font-size: 16px;
+}
+
+.splash li li:hover a {
+  color: $color-dark;
+}
+
+.splash li:hover ul {
+  display: block;
 }
 
 .splash a {
@@ -180,7 +209,7 @@ section h4 {
 }
 
 .splash-inner:hover a {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 
