@@ -4,6 +4,7 @@
 
 $color-main: #fed136;
 $color-main-font: #777777;
+$color-portfolio-background: #f7f7f7;
 $color-light: #fff;
 $color-dark: #000;
 
@@ -45,7 +46,7 @@ h4 {
   }
 
 section {
-  margin: 120px 0;
+  padding: 120px 0;
 }
 
 section h3 {
@@ -241,6 +242,43 @@ article p {
   margin-bottom: 18px;
 }
 
+
+/* Portfolio */
+
+.portfolio {
+  background-color: $color-portfolio-background;
+}
+
+.portfolio figure {
+  margin: 0 0 50px;
+  padding-bottom: 22px;
+  background-color: $color-light;
+}
+
+.image-box {
+  height: 303px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: $transition;
+}
+
+.image-box img:hover {
+  transform: scale(1.1);
+}
+
+.portfolio figcaption h4 {
+  margin-bottom: 8px;
+}
+
+.portfolio .subtitle {
+  font-size: 16px;
+}
 
 
 /* Media queries */
