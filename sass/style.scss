@@ -74,6 +74,27 @@ article p {
   line-height: 1.7;
 }
 
+.footer-container ul,
+.splash ul {
+  list-style-type: none;
+}
+
+.splash li,
+.footer-container li {
+  display: inline-block;
+}
+
+.splash a,
+.footer-container a,
+.services a {
+  text-decoration: none;
+}
+
+.services a,
+.footer-container a {
+  font-size: 0;
+}
+
 
 /* Splash */
 .splash {
@@ -126,13 +147,11 @@ article p {
 }
 
 .splash ul {
-  list-style-type: none;
   margin: 0;
   padding-left: 0;
 }
 
 .splash li {
-  display: inline-block;
   padding-bottom: 12px;
   margin-right: 40px;
   position: relative;
@@ -169,7 +188,6 @@ article p {
 }
 
 .splash a {
-  text-decoration: none;
   color: $color-light;
   transition: $transition;
 }
@@ -217,11 +235,6 @@ article p {
 
 
 /* Services*/
-
-.services a {
-  font-size: 0;
-  text-decoration: none;
-}
 
 .services i.fas {
     font-size: 42px;
@@ -285,6 +298,65 @@ article p {
 
 /* Footer */
 
+.footer-container {
+  height: 120px;
+  position: relative;
+}
+
+.footer-container p {
+  font-family: $headers-font;
+  font-weight: 700;
+  color: $color-footer-font;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  margin: 0;
+}
+
+.footer-container ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+}
+
+.footer-container li {
+  padding-right: 8px;
+}
+
+.footer-container i.fab {
+    font-size: 20px;
+    background-color: #222222;
+    color: $color-light;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    border-radius: 50%;
+    transition: $transition;
+}
+
+.footer-container i.fab:hover {
+  transform: scale(1.1);
+}
+
+.footer-container i.fa-twitter:hover {
+  background-color: #00aced;
+}
+
+.footer-container i.fa-facebook-f:hover {
+  background-color: #3b5998;
+}
+
+.footer-container i.fa-pinterest-p:hover {
+  background-color: #cb2028;
+}
+
+.footer-container i.fa-google-plus-g:hover {
+  background-color: #da2713;
+}
 
 
 /* Media queries */
@@ -292,6 +364,11 @@ article p {
 @media (max-width: 991px) {
   .splash-inner h2 {
     white-space: normal;
+  }
+  .footer-container p {
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
@@ -307,6 +384,9 @@ article p {
   }
   .splash-inner h2 {
     font-size: 48px;
+  }
+  .footer-container p {
+    font-size: 10px;
   }
 }
 
