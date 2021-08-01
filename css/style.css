@@ -178,7 +178,7 @@ article p {
   transition: all 0.5s;
 }
 
-.splash nav a:hover {
+.nav-menu-wrapper a:hover {
   color: #fed136;
   font-size: 16px;
 }
