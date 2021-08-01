@@ -8,6 +8,11 @@ $color-footer-font: #555555;
 $color-portfolio-background: #f7f7f7;
 $color-light: #fff;
 $color-dark: #000;
+$twitter-color: #00aced;
+$facebook-color: #3b5998;
+$pinterest-color: #cb2028;
+$google-color: #da2713;
+
 
 $main-font: serif;
 $headers-font: sans-serif;
@@ -54,6 +59,7 @@ section {
 section h3 {
   font-size: 36px;
   margin-bottom: 20px;
+	text-transform: uppercase;
 }
 
 section h4 {
@@ -91,7 +97,8 @@ article p {
 }
 
 .services a,
-.footer-container a {
+.footer-container a,
+.golden-logo a {
   font-size: 0;
 }
 
@@ -155,6 +162,7 @@ article p {
   padding-bottom: 12px;
   margin-right: 40px;
   position: relative;
+	text-transform: uppercase;
 }
 
 .splash li:last-of-type {
@@ -170,6 +178,7 @@ article p {
   transform: translateX(-50%);
   border-radius: 3%;
 }
+
 .splash li li {
   display: block;
   text-align: left;
@@ -177,6 +186,7 @@ article p {
   padding-bottom: 0;
   white-space: nowrap;
   font-size: 16px;
+	text-transform: none;
 }
 
 .splash li li:hover a {
@@ -217,6 +227,7 @@ article p {
   font-weight: 800;
   margin-bottom: 56px;
   white-space: nowrap;
+	text-transform: uppercase;
 }
 
 .splash-inner a {
@@ -226,6 +237,7 @@ article p {
   padding: 23px 0;
   font-size: 18px;
   font-weight: 700;
+	text-transform: uppercase;
   border-radius: 3%;
 }
 
@@ -244,11 +256,12 @@ article p {
     height: 70px;
     line-height: 70px;
     border-radius: 50%;
+		border: solid 3px transparent;
     transition: $transition;
-}
+	}
 
 .services i.fas:hover {
-  border: solid 3px $color-main;
+  border-color: $color-main;
   transform: scale(1.1);
 }
 
@@ -343,19 +356,19 @@ article p {
 }
 
 .footer-container i.fa-twitter:hover {
-  background-color: #00aced;
+  background-color: $twitter-color;
 }
 
 .footer-container i.fa-facebook-f:hover {
-  background-color: #3b5998;
+  background-color: $facebook-color;
 }
 
 .footer-container i.fa-pinterest-p:hover {
-  background-color: #cb2028;
+  background-color: $pinterest-color;
 }
 
 .footer-container i.fa-google-plus-g:hover {
-  background-color: #da2713;
+  background-color: $google-color;
 }
 
 
@@ -365,6 +378,7 @@ article p {
   .splash-inner h2 {
     white-space: normal;
   }
+
   .footer-container p {
     top: 80%;
     left: 50%;
@@ -376,15 +390,19 @@ article p {
   .golden-logo {
     display: none;
   }
+
   .nav-menu-wrapper {
     justify-content: center;
   }
+
   .splash-inner h1 {
     font-size: 32px;
   }
+
   .splash-inner h2 {
     font-size: 48px;
   }
+
   .footer-container p {
     font-size: 10px;
   }
