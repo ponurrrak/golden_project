@@ -393,6 +393,7 @@ article p {
 
   .nav-menu-wrapper {
     justify-content: center;
+		padding-right: 0;
   }
 
   .splash-inner h1 {
@@ -412,4 +413,48 @@ article p {
   .splash nav li {
     margin-right: 24px;
   }
+}
+
+@media (max-width: 482px) {
+  .splash nav li {
+    margin-right: 5px;
+  }
+
+	.splash-inner h1 {
+    font-size: 24px;
+  }
+
+  .splash-inner h2 {
+    font-size: 40px;
+  }
+
+	.footer-container p {
+    font-size: 8px;
+  }
+
+	.footer-container li {
+	  padding-right: 6px;
+	}
+
+	.footer-container i.fab {
+	    font-size: 15px;
+	    width: 33px;
+	    height: 33px;
+	    line-height: 33px;
+	}
+}
+
+@media (max-width: 374px) {
+  .splash nav li {
+    font-size: 12px;
+  }
+
+	.splash li li {
+		font-size: 14px;
+	}
+
+	.nav-menu-wrapper a:hover {
+  	color: $color-main;
+  	font-size: 14px;
+	}
 }
